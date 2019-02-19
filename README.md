@@ -1,32 +1,28 @@
-# Big Road
+# JOUR2106
 
-The simplist's solution to a mobile-only web story.
+**A repository for coursework in JOUR2106**
 
-## Getting started
+## Introduction
 
-- Fork this repository
-- Change the repo name to `username.github.io` in "Settings"
-- Modify `index.html` to include your content
-- Your web story is available on `username.github.io`
+Hi. I am Kitty, a year 3 student from the Department of Computer Science. As a CS student, I know little about journalism and data analysis. That is what I expect to learn from this course. I have learned some programming skills before but I am not good at writing codes. I sincerely wish that I am able to finish the assignments and projects using the skills I learned from this course. Hopefully, this can be counted as a part of my portfolio.
 
-## Pre-requisite
+![alt text](https://cdn.shopify.com/s/files/1/1384/3839/products/kitty_cone_blanket_grande.jpg?v=1470797736)
 
-Only one: HTML.
 
-You don't need to actually learn it. Just fork the repository, edit the `index.html` file and observe what is changed on the page. Our experience shows that people with no background can make a web story in this way, within 3 hours, someone in 30 minutes.
+### Topics I would like to work on:
 
-## Next steps
+* Mobile app usage
+* Freedom of Press/ Freedom of Speech
 
-- You can modify the repo name in the settings
-- You can buy a domain and add a `CNAME` in this project, to serve your webstory from a [customized domain](https://github.com/hupili/python-for-data-and-media-communication-gitbook/blob/master/notes-week-00.md#bonus-bind-a-custom-domain-name).
+### Protential Dataset
 
-## What does "Big Road" mean?
+Mobile app usage:
+* https://www.statista.com/statistics/412500/hk-social-network-penetration/
+* https://www.statista.com/statistics/348329/smartphone-activities-hong-kong/
+* https://data.gov.hk/en-data/dataset/hk-ogcio-ogcio_hp-support-scheme-for-digital-inclusion-apps
 
-In Chinese, people say **大道至简**. HTML was born a declarative and easy-to-learn language. Its output, a "web page", was originally highly adaptive -- basically the user browser can determine how to present the information. Authors can focus on their content, instead of the format. However, the 20 years or so development of web change the situation completely, making web technology a pain for new learners. Even experienced developers find it hard to follow the latest trend. Fortunately, with the widespread of mobile device, we are back to the early years of web -- simple, and one solution for all.
+Freedom of press
 
-## Sample projects
-
-- [Reporting Style of SCMP](https://warrior960812.github.io/Has-Alibaba-changed-the-South-China-Morning-Post-/)
-- [Analysis of People's daily](https://lullabymia.github.io/big-road/)
-- [Insights from AppStore](https://catmint1215.github.io/)
-- [Communication Job Market](https://zhangningnina.github.io/big-road/)
+* https://www.statista.com/statistics/748321/hong-kong-opinion-on-responsibility-of-local-news-media/
+* https://www.statista.com/statistics/748056/hong-kong-satisfaction-with-press-freedom/
+* https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-thematic-household
