@@ -3,7 +3,7 @@
 <head>
     <title>Dilemma: Kitty's own web story</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
-    <style>
+<style>
         /* Inspired by: http://embedresponsively.com/ */
         
         responsive-block {
@@ -44,15 +44,14 @@
         }
         
         body {
-            padding: 10rem;
-            max-width: 100%;
+            max-width: 360px;
             margin-left: auto;
             margin-right: auto;
             color: #333;
         }
         
         img {
-            max-width: 840px;
+            max-width: 100%;
         }
         
         p {
@@ -72,7 +71,6 @@
             padding-right: 2rem;
             font-size: 0.85em;
         }
-       
         
         h2 {
             border-bottom: 1px solid #ccc;
@@ -85,18 +83,26 @@
         }
         
         cover-image h1 {
-            font-size: 60px;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            color: #282B30;
+            color: #eee;
             text-align: center;
         }
-
-        figure image {
-            height: 500px;
+        
+        cover-image author-block {
+            position: absolute;
+            bottom: 1em;
+            left: 0;
+            right: 0;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            opacity: 0.6;
+            background-color: white;
         }
+        
         code {
             margin: 0;
             max-width: 100%;
