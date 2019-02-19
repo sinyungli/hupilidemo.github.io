@@ -4,6 +4,7 @@ body {
 
 #topImg {
   width: 30%;
+  height: auto;
   position: relative;
   -webkit-animation-name: example;
   -webkit-animation-duration: 4s;
