@@ -1,3 +1,21 @@
 body {
   background-color: #cefaff;
 }
+
+#topImg {
+  width: 30%;
+  position: relative;
+  -webkit-animation-name: example;
+  -webkit-animation-duration: 4s;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {left:0px; top:0px;}
+  25%  {left:100px; top:0px;}
+  50%  {left:250px; top:0px;}
+  75%  {left:800px; top:0px;}
+  100% {left:0px; top:0px;}
+}
