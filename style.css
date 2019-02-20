@@ -3,7 +3,6 @@ body {
 }
 
 #topImg {
-  float: left;
   width: 60%;
   height: auto;
   position: relative;
@@ -11,6 +10,10 @@ body {
   -webkit-animation-duration: 4s;
   animation-name: example;
   animation-duration: 4s;
+}
+
+img {
+  float: right;
 }
 
 /* Standard syntax */
