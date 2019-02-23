@@ -36,7 +36,7 @@
                     <li>No logical sense</li>
                 </ul>
             </div>
-            <a href="https://sinyungli.github.io/hw1/index.html"><h4>To view my HW1, please click here. </h4></a>
+            <a href="https://sinyungli.github.io/hw1/index.html" id="myBtn"><h4>To view my HW1, please click here. </h4></a>
         </div>
         
         <div class="toast">
@@ -48,5 +48,12 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+          $("#myBtn").click(function(){
+            $('.toast').toast('show');
+          });
+        });
+    </script>
 </body>
 </html>
