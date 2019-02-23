@@ -3,8 +3,6 @@ body {
  }
  
 #topImg {
-  width: 50%;
-  height: auto;
   position: relative;
   -webkit-animation-name: example;
   -webkit-animation-duration: 4s;
@@ -13,6 +11,8 @@ body {
 }
 
 img {
+  width: 50%;
+  height: auto;
   float: left;
 }
 
@@ -30,6 +30,5 @@ img {
 }
 
 #intro {
-  width: 40%;
   float: right;
 }
