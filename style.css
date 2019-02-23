@@ -32,3 +32,12 @@ img {
 #intro {
   float: right;
 }
+
+#slogan {
+  font-size: 50px;
+  font-family: monospace;
+  background: linear-gradient(OldLace,LightPink);
+  font-style: oblique;
+  font-weight: bold;
+  border-radius: 25px; 
+}
