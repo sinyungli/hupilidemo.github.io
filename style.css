@@ -39,5 +39,6 @@ img {
   background: linear-gradient(OldLace,LightPink);
   font-style: oblique;
   font-weight: bold;
+  padding: 50px 50px;
   border-radius: 25px; 
 }
