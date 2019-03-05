@@ -1,44 +1,71 @@
 body {
-  background-image: url("https://sinyungli.github.io/images/5120x2880-italian-sky-blue-solid-color-background.jpg");
- }
- 
+    background-image: url("https://sinyungli.github.io/images/5120x2880-italian-sky-blue-solid-color-background.jpg");
+}
+
 #topImg {
-  position: relative;
-  -webkit-animation-name: example;
-  -webkit-animation-duration: 4s;
-  animation-name: example;
-  animation-duration: 4s;
+    position: relative;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
 }
 
 img {
-  width: 75%;
-  height: auto;
-  float: left;
+    width: 75%;
+    height: auto;
+    float: left;
 }
 
 .text {
-   font-size: 120%;
+    font-size: 120%;
 }
 
+
 /* Standard syntax */
+
 @keyframes example {
-  0%   {left:0px; top:0px;}
-  25%  {left:100px; top:0px;}
-  50%  {left:250px; top:0px;}
-  75%  {left:450px; top:0px;}
-  100% {left:0px; top:0px;}
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 100px;
+        top: 0px;
+    }
+    50% {
+        left: 250px;
+        top: 0px;
+    }
+    75% {
+        left: 450px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
 }
 
 #intro {
-  float: right;
+    float: right;
 }
 
-#slogan {
-  font-size: 50px;
-  font-family: monospace;
-  background: linear-gradient(OldLace,LightPink);
-  font-style: oblique;
-  font-weight: bold;
-  padding: 50px 50px;
-  border-radius: 25px; 
+#slogan1 {
+    font-size: 30px;
+    font-family: monospace;
+    background: linear-gradient(#209696, #58AFE4);
+    font-style: oblique;
+    font-weight: bold;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+
+#slogan2 {
+    font-size: 30px;
+    font-family: monospace;
+    background: linear-gradient(#A0F988, #E7F988);
+    font-style: oblique;
+    font-weight: bold;
+    padding: 30px 30px;
+    border-radius: 10px;
 }
