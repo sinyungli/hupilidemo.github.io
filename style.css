@@ -1,4 +1,4 @@
-body {
+        body {
     background-color: #cdfcfd;
 }
 
@@ -13,8 +13,12 @@ body {
     height: auto;
 }
 
-img {
+#topImg img {
     float: left;
+}
+
+#intro img {
+    width: 40%;
 }
 
 .col-title {
@@ -151,7 +155,3 @@ html {
     }
     .col-12 {
         width: 100%;
-    }
-}
-
-%
