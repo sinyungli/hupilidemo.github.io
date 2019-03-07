@@ -1,158 +1,164 @@
-        body {
-        background-color: #cdfcfd;
+body {
+    background-color: #cdfcfd;
+}
+
+#topImg {
+    position: relative;
+    -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+    float: left;
+    width: 60%;
+    height: auto;
+}
+
+#topImg img {
+    float: left;
+}
+
+#intro img {
+    width: 30%;
+    height: auto;
+}
+
+#intro {
+    float: right;
+}
+
+#profile {
+    float: left;
+}
+
+.text {
+    font-size: 120%;
+}
+
+h1 {
+    color: #00868B;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+
+/* Standard syntax */
+
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
     }
-    
-    #topImg {
-        position: relative;
-        -webkit-animation-name: example;
-        -webkit-animation-duration: 4s;
-        animation-name: example;
-        animation-duration: 4s;
-        float: left;
-        width: 60%;
-        height: auto;
+    25% {
+        left: 100px;
+        top: 0px;
     }
-    
-    #topImg img {
-        float: left;
+    50% {
+        left: 250px;
+        top: 0px;
     }
-    
-    #intro img {
-        width: 40%;
+    75% {
+        left: 450px;
+        top: 0px;
     }
-    
-    #intro {
-        float: right;
+    100% {
+        left: 0px;
+        top: 0px;
     }
-    
-    #profile {
-        float: left;
+}
+
+#intro {
+    float: right;
+}
+
+#slogan1 {
+    font-size: 30px;
+    font-family: monospace;
+    background: linear-gradient(#209696, #58AFE4);
+    font-style: oblique;
+    font-weight: bold;
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+
+#slogan2 {
+    font-size: 30px;
+    font-family: monospace;
+    background: linear-gradient(#A0F988, #E7F988);
+    font-style: oblique;
+    font-weight: bold;
+    padding: 30px 30px;
+    border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: right;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+
+/* For mobile phones: */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {
+        width: 8.33%;
     }
-    
-    .text {
-        font-size: 120%;
+    .col-2 {
+        width: 16.66%;
     }
-    
-    h1 {
-        color: #00868B;
-        font-size: 40px;
+    .col-3 {
+        width: 25%;
     }
-    
-    h2 {
-        font-size: 30px;
+    .col-4 {
+        width: 33.33%;
     }
-    
-    h3 {
-        font-size: 20px;
+    .col-5 {
+        width: 41.66%;
     }
-    /* Standard syntax */
-    
-    @keyframes example {
-        0% {
-            left: 0px;
-            top: 0px;
-        }
-        25% {
-            left: 100px;
-            top: 0px;
-        }
-        50% {
-            left: 250px;
-            top: 0px;
-        }
-        75% {
-            left: 450px;
-            top: 0px;
-        }
-        100% {
-            left: 0px;
-            top: 0px;
-        }
+    .col-6 {
+        width: 50%;
     }
-    
-    #intro {
-        float: right;
+    .col-7 {
+        width: 58.33%;
     }
-    
-    #slogan1 {
-        font-size: 30px;
-        font-family: monospace;
-        background: linear-gradient(#209696, #58AFE4);
-        font-style: oblique;
-        font-weight: bold;
-        padding: 30px 30px;
-        border-radius: 5px;
+    .col-8 {
+        width: 66.66%;
     }
-    
-    #slogan2 {
-        font-size: 30px;
-        font-family: monospace;
-        background: linear-gradient(#A0F988, #E7F988);
-        font-style: oblique;
-        font-weight: bold;
-        padding: 30px 30px;
-        border-radius: 5px;
+    .col-9 {
+        width: 75%;
     }
-    
-    * {
-        box-sizing: border-box;
+    .col-10 {
+        width: 83.33%;
     }
-    
-    [class*="col-"] {
-        float: right;
-        padding: 15px;
+    .col-11 {
+        width: 91.66%;
     }
-    
-    .row::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    html {
-        font-family: "Lucida Sans", sans-serif;
-    }
-    /* For mobile phones: */
-    
-    [class*="col-"] {
+    .col-12 {
         width: 100%;
     }
-    
-    @media only screen and (min-width: 768px) {
-        /* For desktop: */
-        .col-1 {
-            width: 8.33%;
-        }
-        .col-2 {
-            width: 16.66%;
-        }
-        .col-3 {
-            width: 25%;
-        }
-        .col-4 {
-            width: 33.33%;
-        }
-        .col-5 {
-            width: 41.66%;
-        }
-        .col-6 {
-            width: 50%;
-        }
-        .col-7 {
-            width: 58.33%;
-        }
-        .col-8 {
-            width: 66.66%;
-        }
-        .col-9 {
-            width: 75%;
-        }
-        .col-10 {
-            width: 83.33%;
-        }
-        .col-11 {
-            width: 91.66%;
-        }
-        .col-12 {
-            width: 100%;
-        }
+}
