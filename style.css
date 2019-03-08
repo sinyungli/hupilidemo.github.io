@@ -374,3 +374,24 @@
         position: absolute;
         width: 180px;
     }
+    
+    .button {
+        border: none;
+        color: gray;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    
+    #nowBtn {
+        background-color: #ffc0cb;
+        font-size: 20px;
+    }
+    
+    #pastBtn {
+        background-color: #add8e6;
+        font-size: 20px;
+    }
