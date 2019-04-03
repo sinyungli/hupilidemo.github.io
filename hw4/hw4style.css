@@ -35,3 +35,7 @@ body {
 .col-3-pic {
   width: 50%;
 }
+
+ol {
+  padding: 15px; 
+}
