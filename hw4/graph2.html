@@ -8,7 +8,7 @@
     <body>
         <div class="chart">
             <h4>Here is an improved version of the chart (Part 1)</h4>
-            <div id="container1" class="col-6"></div>
+            <div id="container2" class="col-6"></div>
         </div>
 
         <script src=" https://code.highcharts.com/highcharts.js "></script>
@@ -20,8 +20,7 @@
         <script src="https://code.highcharts.com/modules/export-data.js "></script>
 
         <script>
-            // Set up the chart
-            Highcharts.chart('container1', {
+            Highcharts.chart('container2', {
                 chart: {
                     type: 'pyramid3d',
                     options3d: {
@@ -32,7 +31,7 @@
                     }
                 },
                 title: {
-                    text: 'Number of users engaging in activities related to Mozilla browser(thousands) chart 1'
+                    text: 'Number of users engaging in activities related to Mozilla browser chart 2'
                 },
                 plotOptions: {
                     series: {
@@ -52,10 +51,13 @@
                 series: [{
                     name: 'Number of users',
                     data: [
-                        ['Total Users', 220000000],
-                        ['Active Daily Users', 70000000],
-                        ['Download Day Participants', 8000000],
-                        ['Beta Testers', 3000000],
+                        ['Alpha Testers', 100000],
+                        ['Bugzilla Accounts', 20000],
+                        ['Ny Time Ad Donars', 15000],
+                        ['Nightfly Testers', 10000],
+                        ['Localizers & Add On Developers', 2000],
+                        ['Core Developers', 400],
+
                     ]
                 }]
             });
