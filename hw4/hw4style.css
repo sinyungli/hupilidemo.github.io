@@ -60,11 +60,6 @@ body {
     }
 }
 
-[class*="col-"] {
-    float: left;
-    padding: 10px;
-}
-
 #text {
     float: right;
 }
