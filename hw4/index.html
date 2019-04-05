@@ -30,7 +30,8 @@
 
         <div class="chart">
             <h4>Here is an improved version of the chart</h4>
-            <div id="container"></div>
+            <div id="container1"></div>
+            <div id="container2"></div>
         </div>
 
         <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -43,7 +44,7 @@
 
         <script>
             // Set up the chart
-            Highcharts.chart('container', {
+            Highcharts.chart('container1', {
                 chart: {
                     type: 'pyramid3d',
                     options3d: {
@@ -81,7 +82,7 @@
                     ]
                 }]
             });
-            Highcharts.chart('container', {
+            Highcharts.chart('container2', {
                 chart: {
                     type: 'pyramid3d',
                     options3d: {

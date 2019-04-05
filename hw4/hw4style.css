@@ -78,7 +78,7 @@ h3 {
     padding: 15px;
 }
 
-#container {
+#container1 {
     min-width: 400px;
     max-width: 1000px;
     margin: 0 auto;
@@ -87,6 +87,19 @@ h3 {
     margin-right: auto;
 }
 
-#container {
+#container1 {
+    height: 500px;
+}
+
+#container2 {
+    min-width: 400px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#container2 {
     height: 500px;
 }
