@@ -65,11 +65,11 @@ body {
     padding: 10px;
 }
 
-.text {
+#text {
     float: right;
 }
 
-.pic {
+#pic {
     width: 45%;
     float: left;
 }
