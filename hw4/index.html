@@ -37,42 +37,39 @@
 
 
         <script>
+            // Set up the chart
             Highcharts.chart('container', {
                 chart: {
-                    type: 'column'
+                    type: 'pyramid3d',
+                    options3d: {
+                        enabled: true,
+                        alpha: 10,
+                        depth: 50,
+                        viewDistance: 50
+                    }
                 },
                 title: {
-                    text: 'Number of users using Mozilla firefox browser'
+                    text: 'Number of users engaging in activities related to Mozilla '
                 },
-                subtitle: {
-                    text: 'Source: <a href="https://eagereyes.org/media/2010/mozilla_infographics.jpg">Mozilla infograph</a>'
-                },
-                xAxis: {
-                    type: 'category',
-                    labels: {
-                        rotation: -45,
-                        style: {
-                            fontSize: '13px',
-                            fontFamily: 'Verdana, sans-serif'
-                        }
+                plotOptions: {
+                    series: {
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b> ({point.y:,.0f})',
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            allowOverlap: true,
+                            x: 10,
+                            y: -5
+                        },
+                        width: '60%',
+                        height: '80%',
+                        center: ['50%', '45%']
                     }
-                },
-                yAxis: {
-                    min: 0,
-                    title: {
-                        text: 'Number of user(thousands)'
-                    }
-                },
-                legend: {
-                    enabled: false
-                },
-                tooltip: {
-                    pointFormat: 'Number of user: <b>{point.y:.1f} thousand</b>'
                 },
                 series: [{
-                    name: '',
+                    name: 'Number of users',
                     data: [
-                        ['Total', 220000],
+                        ['Total Users', 220000],
                         ['Active Daily Users', 70000],
                         ['Download Day Participants', 8000],
                         ['Beta Testers', 3000],
@@ -82,19 +79,8 @@
                         ['Nightfly Testers', 10],
                         ['Localizers & Add On Developers', 2],
                         ['Core Developers', 0.4],
-                    ],
-                    dataLabels: {
-                        enabled: true,
-                        rotation: -90,
-                        color: '#FFFFFF',
-                        align: 'right',
-                        format: '{point.y:.1f}', // one decimal
-                        y: 10, // 10 pixels down from the top
-                        style: {
-                            fontSize: '13px',
-                            fontFamily: 'Verdana, sans-serif'
-                        }
-                    }
+
+                    ]
                 }]
             });
         </script>
