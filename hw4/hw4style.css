@@ -78,6 +78,10 @@ h3 {
     padding: 15px;
 }
 
+.chart {
+    float: left;
+}
+
 #container1 {
     margin: 0 auto;
     display: block;
