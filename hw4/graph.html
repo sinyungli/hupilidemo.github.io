@@ -44,8 +44,8 @@
                             x: 10,
                             y: -5
                         },
-                        width: '144%',
-                        height: '192%',
+                        width: '60%',
+                        height: '160%',
                         center: ['60', '54%']
                     }
                 },
@@ -59,7 +59,49 @@
                     ]
                 }]
             });
+
+            // Set up the chart
+            Highcharts.chart('container1', {
+                chart: {
+                    type: 'pyramid3d',
+                    options3d: {
+                        enabled: true,
+                        alpha: 10,
+                        depth: 50,
+                        viewDistance: 50
+                    }
+                },
+                title: {
+                    text: 'Number of users engaging in activities related to Mozilla browser(thousands) chart 1'
+                },
+                plotOptions: {
+                    series: {
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b> ({point.y:,.0f})',
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+                            allowOverlap: true,
+                            x: 10,
+                            y: -5
+                        },
+                        width: '60%',
+                        height: '160%',
+                        center: ['60', '54%']
+                    }
+                },
+                series: [{
+                    name: 'Number of users',
+                    data: [
+                        ['Alpha Testers', 100000],
+                        ['Bugzilla Accounts', 20000],
+                        ['NY Time Ad Donar', 15000],
+                        ['Nightly Testers', 10000],
+                        ['Localizers & Add Ons Developers', 2000]
+                        ['Core Developers', 400]
+                    ]
+                }]
+            });
         </script>
     </body>
 
-</html>
+</html>,
