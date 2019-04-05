@@ -6,7 +6,7 @@ body {
 /* For desktop: */
 
 .col-6 {
-    width: 100%;
+    width: 50%;
 }
 
 .col-12 {
@@ -25,12 +25,12 @@ body {
     padding: 10px;
 }
 
-.col-3-text {
+.text {
     float: right;
 }
 
-.col-3-pic {
-    width: 80%;
+.pic {
+    width: 40%;
     float: left;
 }
 
