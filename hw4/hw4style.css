@@ -79,8 +79,8 @@ h3 {
 }
 
 #container {
-    min-width: 620px;
-    max-width: 1600px;
+    min-width: 400px;
+    max-width: 1000px;
     margin: 0 auto;
     display: block;
     margin-left: auto;
@@ -88,5 +88,5 @@ h3 {
 }
 
 #container {
-    height: 800px;
+    height: 500px;
 }
