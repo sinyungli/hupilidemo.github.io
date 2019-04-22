@@ -16,7 +16,7 @@
 
     <body>
         <div id="box">
-            <h1 class="display-3">Pattern of Participation in Public Affairs<span class="badge badge-secondary">Demo</span></h1>
+            <h1 class="display-3">Pattern of Participation in Public Affairs</h1>
             <p class="lead">
                 In Hong Kong, women and men have equal right to vote and stand for elections. Whilst there were still far more male than female candidates who stood for election as members of different Government Councils, the number of female candidates had registered
                 significant growth over the past 2 decades or so. Except for the age group 71 and over, the turnout rates for both sexes were broadly similar across all age groups in recent years. Males aged 71 and over still had higher turnout rates
@@ -25,7 +25,7 @@
             <script src="https://code.highcharts.com/highcharts.js"></script>
             <script src="https://code.highcharts.com/highcharts-more.js"></script>
 
-            <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto;"></div>
+            <div id="container" style="min-width: 620px; max-width: 1200px; height: 800px; margin: 0 auto;"></div>
         </div>
         <script>
             Highcharts.chart('container', {
@@ -49,8 +49,8 @@
                     endOnTick: false
                 },
 
-                series: [{
-                    data: [
+                gender: [{
+                    male: [
                         [9, 81, 63],
                         [98, 5, 89],
                         [51, 50, 73],
@@ -80,7 +80,7 @@
                         }
                     }
                 }, {
-                    data: [
+                    female: [
                         [42, 38, 20],
                         [6, 18, 1],
                         [1, 93, 55],
