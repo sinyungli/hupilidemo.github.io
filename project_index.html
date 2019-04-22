@@ -4,20 +4,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="proj_c.css">
         <title>project chart demo</title>
+        <style>
+            .box {
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+        </style>
     </head>
 
     <body>
-        <h1 class="display-3">Pattern of Participation in Public Affairs<span class="badge badge-secondary">Demo</span></h1>
-        <p class="lead">
-            In Hong Kong, women and men have equal right to vote and stand for elections. Whilst there were still far more male than female candidates who stood for election as members of different Government Councils, the number of female candidates had registered
-            significant growth over the past 2 decades or so. Except for the age group 71 and over, the turnout rates for both sexes were broadly similar across all age groups in recent years. Males aged 71 and over still had higher turnout rates than
-            their female counterparts in various elections.
-        </p>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <div id="box">
+            <h1 class="display-3">Pattern of Participation in Public Affairs<span class="badge badge-secondary">Demo</span></h1>
+            <p class="lead">
+                In Hong Kong, women and men have equal right to vote and stand for elections. Whilst there were still far more male than female candidates who stood for election as members of different Government Councils, the number of female candidates had registered
+                significant growth over the past 2 decades or so. Except for the age group 71 and over, the turnout rates for both sexes were broadly similar across all age groups in recent years. Males aged 71 and over still had higher turnout rates
+                than their female counterparts in various elections.
+            </p>
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/highcharts-more.js"></script>
 
-        <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto;"></div>
-
+            <div id="container" style="min-width: 310px; max-width: 600px; height: 400px; margin: 0 auto;"></div>
+        </div>
         <script>
             Highcharts.chart('container', {
 
@@ -28,7 +37,7 @@
                 },
 
                 title: {
-                    text: 'Highcharts bubbles with radial gradient fill'
+                    text: 'Candidates and elected members in Government Councils (based on elected year) by sex'
                 },
 
                 xAxis: {
