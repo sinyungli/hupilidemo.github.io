@@ -5,12 +5,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <style>
-            body {
-                margin-left: 1%;
-            }
-            
-            h5,
-            .result {
+            h5 {
                 text-align: right;
             }
             
@@ -19,9 +14,10 @@
                 width: 50%;
             }
             
-            .ans {
+            .Btn {
                 float: right;
-                text-align: center;
+                position: absolute;
+                right: 25%;
             }
             
             .slider {
@@ -61,94 +57,165 @@
     </head>
 
     <body>
-        <h1>Internet Data Calculator</h1>
-        <h3>This calculator helps you to predict how much usage, on average, your monthly Internet activities take.</h3>
-        <h2>ARE YOU READY TO CALCULATE YOUR DATA AMOUNT?</h2>
-        <p>Please fill in the following information: </p>
-        <ol>
-            <li>Emails sent and received.</li>
-            <li>Hours of surfing the web.</li>
-            <li>Social media posts with photos.</li>
-            <li>Hours of streaming standard-definition video.</li>
-            <li>Hours of streaming high-definition video.</li>
-            <li>Hours of streaming 4K video.</li>
-            <li>Time spent online gaming.</li>
-        </ol>
-        <div class="slide">
-            <div id="slide1"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange1">
-                <p>Number of email send and receive (not counting attachment): <span id="demo1"></span></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg 8">
+                    <h1>Internet Data Calculator</h1>
+                    <h3>This calculator helps you to predict how much usage, on average, your monthly Internet activities take.</h3>
+                    <h2>ARE YOU READY TO CALCULATE YOUR DATA AMOUNT?</h2>
+                    <p>Please fill in the following information: </p>
+                    <ol>
+                        <li>Emails sent and received.</li>
+                        <li>Hours of surfing the web.</li>
+                        <li>Social media posts with photos.</li>
+                        <li>Hours of streaming standard-definition video.</li>
+                        <li>Hours of streaming high-definition video.</li>
+                        <li>Hours of streaming 4K video.</li>
+                        <li>Time spent online gaming.</li>
+                    </ol>
+
+                    <div class="slide">
+                        <div id="slide1"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange1">
+                            <p>Number of email send and receive (not counting attachment): <span id="demo1"></span></p>
+                        </div>
+                        <br><br>
+                        <div id="slide2"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange2">
+                            <p>Number of email send and receive (with attachments): <span id="demo2"></span></p>
+                        </div>
+                        <br><br>
+
+                        <div id="slide3"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange3">
+                            <p>Number of hours surfing the Internet: <span id="demo3"></span></p>
+                        </div>
+                        <br><br>
+
+                        <div id="slide4"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange4">
+                            <p>Number of songs downloaded: <span id="demo4"></span></p>
+                        </div>
+                        <br><br>
+
+                        <div id="slide5"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange5">
+                            <p>Number of photos uploaded to social media: <span id="demo5"></span></p>
+                        </div>
+                        <br><br>
+                        <div id="slide6"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange6">
+                            <p>Number of hours streaming standard definition video: <span id="demo6"></span></p>
+                        </div>
+                        <br><br>
+                        <div id="slide7"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange7">
+                            <p>Number of hours streaming high definition video: <span id="demo7"></span></p>
+                        </div>
+                        <br><br>
+                        <div id="slide8"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange8">
+                            <p>Number of hours streaming 4K definition video: <span id="demo8"></span></p>
+                        </div>
+                        <br><br>
+                        <div id="slide9"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange9">
+                            <p>Number of hours playing online games: <span id="demo9"></span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br><br>
-            <div id="slide2"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange2">
-                <p>Number of email send and receive (with attachments): <span id="demo2"></span></p>
+            <div class="col-sm-12 col-lg 4">
+                <div id="ans">
+                    <button type="button" id="Btn" class="btn btn-outline-dark" onclick="myFunction()">Calculate</button>
+                    <br><br>
+                    <h1>
+                        <div id="result"></div>
+                        <div id="result2"></div>
+                    </h1>
+                </div>
             </div>
-            <br><br>
+            <script>
+                var slider = document.getElementById("myRange1");
+                var output = document.getElementById("demo1");
+                output.innerHTML = slider.value;
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
 
-            <div id="slide3"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange3">
-                <p>Number of hours surfing the Internet: <span id="demo3"></span></p>
-            </div>
-            <br><br>
+                var slider2 = document.getElementById("myRange2");
+                var output2 = document.getElementById("demo2");
+                output2.innerHTML = slider2.value;
+                slider2.oninput = function() {
+                    output2.innerHTML = this.value;
+                }
 
-            <div id="slide4"><input type="range" min="1" max="1000" value="250" class="slider" id="myRange4">
-                <p>Number of songs downloaded: <span id="demo4"></span></p>
-            </div>
-            <br><br>
+                var slider3 = document.getElementById("myRange3");
+                var output3 = document.getElementById("demo3");
+                output3.innerHTML = slider3.value;
+                slider3.oninput = function() {
+                    output3.innerHTML = this.value;
+                }
 
-            <div id="slide5"><input type="range" min="1" max="1000" value="250" class="slider" id="myRange5">
-                <p>Number of photos uploaded to social media: <span id="demo5"></span></p>
-            </div>
-        </div>
-        <div id="ans">
-            <button type="button" class="btn btn-outline-dark" onclick="myFunction()">Calculate</button>
-            <div id="result"></div>
-        </div>
-        <script>
-            var slider = document.getElementById("myRange1");
-            var output = document.getElementById("demo1");
-            output.innerHTML = slider.value;
-            slider.oninput = function() {
-                output.innerHTML = this.value;
-            }
+                var slider4 = document.getElementById("myRange4");
+                var output4 = document.getElementById("demo4");
+                output4.innerHTML = slider4.value;
+                slider4.oninput = function() {
+                    output4.innerHTML = this.value;
+                }
 
-            var slider2 = document.getElementById("myRange2");
-            var output2 = document.getElementById("demo2");
-            output2.innerHTML = slider2.value;
-            slider2.oninput = function() {
-                output2.innerHTML = this.value;
-            }
+                var slider5 = document.getElementById("myRange5");
+                var output5 = document.getElementById("demo5");
+                output5.innerHTML = slider5.value;
+                slider5.oninput = function() {
+                    output5.innerHTML = this.value;
+                }
 
-            var slider3 = document.getElementById("myRange3");
-            var output3 = document.getElementById("demo3");
-            output3.innerHTML = slider3.value;
-            slider3.oninput = function() {
-                output3.innerHTML = this.value;
-            }
+                var slider6 = document.getElementById("myRange6");
+                var output6 = document.getElementById("demo6");
+                output6.innerHTML = slider6.value;
+                slider6.oninput = function() {
+                    output6.innerHTML = this.value;
+                }
 
-            var slider4 = document.getElementById("myRange4");
-            var output4 = document.getElementById("demo4");
-            output4.innerHTML = slider4.value;
-            slider4.oninput = function() {
-                output4.innerHTML = this.value;
-            }
+                var slider7 = document.getElementById("myRange7");
+                var output7 = document.getElementById("demo7");
+                output7.innerHTML = slider7.value;
+                slider7.oninput = function() {
+                    output7.innerHTML = this.value;
+                }
 
-            var slider5 = document.getElementById("myRange5");
-            var output5 = document.getElementById("demo5");
-            output5.innerHTML = slider5.value;
-            slider5.oninput = function() {
-                output5.innerHTML = this.value;
-            }
+                var slider8 = document.getElementById("myRange8");
+                var output8 = document.getElementById("demo8");
+                output8.innerHTML = slider8.value;
+                slider8.oninput = function() {
+                    output8.innerHTML = this.value;
+                }
 
-            function myFunction() {
-                var result = parseInt(slider.value) * 20 + parseInt(slider2.value) * 300 + parseInt(slider3.value) * 15000 + parseInt(slider4.value) * 4000 + parseInt(slider5.value) * 5000;
-                document.getElementById("result").innerHTML = "It is predicted the amount of data you will use:  " +
-                    result;
-            }
-        </script>
+                var slider9 = document.getElementById("myRange9");
+                var output9 = document.getElementById("demo9");
+                output9.innerHTML = slider8.value;
+                slider9.oninput = function() {
+                    output9.innerHTML = this.value;
+                }
 
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+                function myFunction() {
+                    var result = parseInt(slider.value) * 20 + parseInt(slider2.value) * 300 + parseInt(slider3.value) * 15000 +
+                        parseInt(slider4.value) * 4000 + parseInt(slider5.value) * 5000 + parseInt(slider6.value) * 11700 +
+                        parseInt(slider7.value) * 41700 + parseInt(slider8.value) * 9750 + parseInt(slider9.value) * 200;
+                    document.getElementById("result").innerHTML =
+                        result + " kilobytes(kB)";
+                    if (result >= 0 && result <= 21917500) {
+                        document.getElementById("result2").innerHTML =
+                            "LOW USAGE OF DATA";
+                    } else if (result > 21917500 && result <= 43835000) {
+                        document.getElementById("result2").innerHTML =
+                            "MODERATE USAGE OF DATA";
+                    } else if (result > 43835000 && result <= 65752500) {
+                        document.getElementById("result2").innerHTML =
+                            "SLIGHTLY HIGH USAGE OF DATA";
+                    } else {
+                        document.getElementById("result2").innerHTML =
+                            "HIGH USAGE OF DATA";
+                    }
+                }
+            </script>
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 
 </html>
