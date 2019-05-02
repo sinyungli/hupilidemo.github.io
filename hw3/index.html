@@ -5,12 +5,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <style>
-            p {
-                text-align: center;
+            body {
+                margin-left: 1%;
+            }
+            
+            h5,
+            .result {
+                text-align: right;
             }
             
             .slide {
-                width: 80%;
+                float: left;
+                width: 50%;
+            }
+            
+            .ans {
+                float: right;
+                text-align: center;
             }
             
             .slider {
@@ -53,10 +64,9 @@
         <h1>Internet Data Calculator</h1>
         <h3>This calculator helps you to predict how much usage, on average, your monthly Internet activities take.</h3>
         <h2>ARE YOU READY TO CALCULATE YOUR DATA AMOUNT?</h2>
-        <h4>Please fill in the following information: </h4>
+        <p>Please fill in the following information: </p>
         <ol>
             <li>Emails sent and received.</li>
-            <li>Hours of streaming music.</li>
             <li>Hours of surfing the web.</li>
             <li>Social media posts with photos.</li>
             <li>Hours of streaming standard-definition video.</li>
@@ -64,24 +74,34 @@
             <li>Hours of streaming 4K video.</li>
             <li>Time spent online gaming.</li>
         </ol>
-        <div class="slide" id="slide1"><input type="range" min="0" max="100" value="50" class="slider" id="myRange1">
-            <p>Number of mail send and receive (not counting attachment): <span id="demo1"></span></p>
-        </div>
-        <br><br>
-        <div class="slide" id="slide2"><input type="range" min="0" max="100" value="50" class="slider" id="myRange2">
-            <p>Number of attachments send and receive: <span id="demo2"></span></p>
-        </div>
-        <br><br>
+        <div class="slide">
+            <div id="slide1"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange1">
+                <p>Number of email send and receive (not counting attachment): <span id="demo1"></span></p>
+            </div>
+            <br><br>
+            <div id="slide2"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange2">
+                <p>Number of email send and receive (with attachments): <span id="demo2"></span></p>
+            </div>
+            <br><br>
 
-        <div class="slide" id="slide3"><input type="range" min="0" max="50" value="25" class="slider" id="myRange3">
-            <p>Number of hours surfing the Internet <span id="demo3"></span></p>
-        </div>
-        <br><br>
-        <div class="slide" id="slide4"><input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
-            <p>Number of attachments send and receive: <span id="demo4"></span></p>
-        </div>
+            <div id="slide3"><input type="range" min="0" max="1000" value="250" class="slider" id="myRange3">
+                <p>Number of hours surfing the Internet: <span id="demo3"></span></p>
+            </div>
+            <br><br>
 
+            <div id="slide4"><input type="range" min="1" max="1000" value="250" class="slider" id="myRange4">
+                <p>Number of songs downloaded: <span id="demo4"></span></p>
+            </div>
+            <br><br>
 
+            <div id="slide5"><input type="range" min="1" max="1000" value="250" class="slider" id="myRange5">
+                <p>Number of photos uploaded to social media: <span id="demo5"></span></p>
+            </div>
+        </div>
+        <div id="ans">
+            <button type="button" class="btn btn-outline-dark" onclick="myFunction()">Calculate</button>
+            <div id="result"></div>
+        </div>
         <script>
             var slider = document.getElementById("myRange1");
             var output = document.getElementById("demo1");
@@ -89,32 +109,39 @@
             slider.oninput = function() {
                 output.innerHTML = this.value;
             }
-        </script>
 
-        <script>
             var slider2 = document.getElementById("myRange2");
             var output2 = document.getElementById("demo2");
             output2.innerHTML = slider2.value;
             slider2.oninput = function() {
                 output2.innerHTML = this.value;
             }
-        </script>
 
-        <script>
             var slider3 = document.getElementById("myRange3");
             var output3 = document.getElementById("demo3");
-            output.innerHTML = slider.value;
+            output3.innerHTML = slider3.value;
             slider3.oninput = function() {
                 output3.innerHTML = this.value;
             }
-        </script>
 
-        <script>
             var slider4 = document.getElementById("myRange4");
             var output4 = document.getElementById("demo4");
-            output4.innerHTML = slider2.value;
+            output4.innerHTML = slider4.value;
             slider4.oninput = function() {
                 output4.innerHTML = this.value;
+            }
+
+            var slider5 = document.getElementById("myRange5");
+            var output5 = document.getElementById("demo5");
+            output5.innerHTML = slider5.value;
+            slider5.oninput = function() {
+                output5.innerHTML = this.value;
+            }
+
+            function myFunction() {
+                var result = parseInt(slider.value) * 20 + parseInt(slider2.value) * 300 + parseInt(slider3.value) * 15000 + parseInt(slider4.value) * 4000 + parseInt(slider5.value) * 5000;
+                document.getElementById("result").innerHTML = "It is predicted the amount of data you will use:  " +
+                    result;
             }
         </script>
 
