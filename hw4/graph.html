@@ -7,27 +7,102 @@
 
     <body>
         <div class="chart">
-            <h4>Here is an improved version of the chart</h4>
+            <h4>Here is an improved version of the chart. Please view in full screen for details.</h4>
             <div id="container"></div>
         </div>
         <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+        <div id="container" style="min-width: 310px; height: 800px; margin: 0 auto"></div>
 
         <div id="container"></div>
         <script>
-            var data = [{
-                id: '0.0',
-                parent: '',
-                name: 'Total Users',
-                value: 220000000
-            }, {
-                id: '1.1',
-                parent: '0.0',
-                name: 'Active Daily Users',
-                value: 70000000
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Number of Mozilla service users'
+                },
+                subtitle: {
+                    text: 'Source: WorldClimate.com'
+                },
+                xAxis: {
+                    categories: [
+                        'Number of users',
+                    ],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Rainfall (mm)'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.0f}</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: 'Total Users',
+                    data: [220000000]
 
-            }]
+                }, {
+                    name: 'Active Daily Users',
+                    data: [70000000]
+
+                }, {
+                    name: 'Highly Active Users',
+                    data: [35000000]
+
+                }, {
+                    name: 'Download Day Participants',
+                    data: [8000000]
+
+                }, {
+                    name: 'Beta Testers',
+                    data: [3000000]
+
+                }, {
+                    name: 'Alpha Testers',
+                    data: [100000]
+
+                }, {
+                    name: 'Bugzilla Accounts',
+                    data: [20000]
+
+                }, {
+                    name: 'NY Times Ad Donars',
+                    data: [15000]
+
+                }, {
+                    name: 'Nightly Testers',
+                    data: [10000]
+
+                }, {
+                    name: 'Localizers and Developers',
+                    data: [2000]
+
+                }, {
+                    name: 'Core Developers',
+                    data: [400]
+
+                }]
+            });
         </script>
+
+
     </body>
 
 </html>
