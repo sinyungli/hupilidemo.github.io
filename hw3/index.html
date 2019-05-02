@@ -2,9 +2,51 @@
 
     <head>
         <title>Data Calculator</title>
-        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-        <script src="semantic/dist/semantic.min.js"></script>
+        <style>
+            p {
+                text-align: center;
+            }
+            
+            .slide {
+                width: 80%;
+            }
+            
+            .slider {
+                -webkit-appearance: none;
+                width: 100%;
+                height: 25px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .slider:hover {
+                opacity: 1;
+            }
+            
+            .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                background: #000000;
+                cursor: pointer;
+            }
+            
+            .slider::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+        </style>
+
     </head>
 
     <body>
@@ -22,8 +64,64 @@
             <li>Hours of streaming 4K video.</li>
             <li>Time spent online gaming.</li>
         </ol>
-        <button class="ui button">Follow</button>
+        <div class="slide" id="slide1"><input type="range" min="0" max="100" value="50" class="slider" id="myRange1">
+            <p>Number of mail send and receive (not counting attachment): <span id="demo1"></span></p>
+        </div>
+        <br><br>
+        <div class="slide" id="slide2"><input type="range" min="0" max="100" value="50" class="slider" id="myRange2">
+            <p>Number of attachments send and receive: <span id="demo2"></span></p>
+        </div>
+        <br><br>
 
+        <div class="slide" id="slide3"><input type="range" min="0" max="50" value="25" class="slider" id="myRange3">
+            <p>Number of hours surfing the Internet <span id="demo3"></span></p>
+        </div>
+        <br><br>
+        <div class="slide" id="slide4"><input type="range" min="1" max="100" value="50" class="slider" id="myRange4">
+            <p>Number of attachments send and receive: <span id="demo4"></span></p>
+        </div>
+
+
+        <script>
+            var slider = document.getElementById("myRange1");
+            var output = document.getElementById("demo1");
+            output.innerHTML = slider.value;
+            slider.oninput = function() {
+                output.innerHTML = this.value;
+            }
+        </script>
+
+        <script>
+            var slider2 = document.getElementById("myRange2");
+            var output2 = document.getElementById("demo2");
+            output2.innerHTML = slider2.value;
+            slider2.oninput = function() {
+                output2.innerHTML = this.value;
+            }
+        </script>
+
+        <script>
+            var slider3 = document.getElementById("myRange3");
+            var output3 = document.getElementById("demo3");
+            output.innerHTML = slider.value;
+            slider3.oninput = function() {
+                output3.innerHTML = this.value;
+            }
+        </script>
+
+        <script>
+            var slider4 = document.getElementById("myRange4");
+            var output4 = document.getElementById("demo4");
+            output4.innerHTML = slider2.value;
+            slider4.oninput = function() {
+                output4.innerHTML = this.value;
+            }
+        </script>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 
 </html>
